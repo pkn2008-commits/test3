@@ -1,207 +1,320 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>박기남 교수 프로필 - 경영학 박사 & 경영정보학 전문가</title>
+    <title>박기남 교수 | 경영학 박사 · e비즈니스 & MIS</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
     <style>
-        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+        
+        :root {
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-editorial: 'Newsreader', serif;
+            --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+        }
+
         body {
-            font-family: 'Pretendard', sans-serif;
+            font-family: var(--font-sans);
+            background-color: #fbf9f5;
+            color: #1c1917;
+            word-break: keep-all;
+        }
+
+        .font-serif-title {
+            font-family: var(--font-serif);
+        }
+
+        .font-editorial {
+            font-family: var(--font-editorial);
+        }
+
+        /* Custom Grain & Border Touches */
+        .editorial-border {
+            border-color: rgba(28, 25, 23, 0.12);
+        }
+
+        .editorial-border-strong {
+            border-color: rgba(28, 25, 23, 0.8);
+        }
+
+        .bg-stone-paper {
+            background-color: #f6f3eb;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased">
+<body class="selection:bg-stone-800 selection:text-amber-100 antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- Header / Hero Section -->
-    <header class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white py-20 px-6 shadow-xl relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#rgba(255,255,255,0.2)_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="max-w-5xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-10">
-            <!-- Profile Image Placeholder -->
-            <div class="relative group">
-                <div class="w-48 h-48 md:w-56 md:h-56 rounded-2xl bg-slate-700 border-4 border-indigo-400/30 overflow-hidden shadow-2xl flex items-center justify-center text-slate-400">
-                    <i class="fa-solid fa-user-tie text-8xl"></i>
-                </div>
-                <div class="absolute -bottom-3 -right-3 bg-indigo-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full shadow-lg border border-indigo-400">
-                    경영학 박사
-                </div>
+    <!-- Top Navigation / Editorial Bar -->
+    <header class="border-b editorial-border px-6 py-5 sticky top-0 bg-[#fbf9f5]/90 backdrop-blur-md z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center text-xs tracking-widest uppercase text-stone-600 font-medium">
+            <div class="flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-amber-700 inline-block"></span>
+                <span>Dong-Eui University</span>
             </div>
-
-            <!-- Header Info -->
-            <div class="text-center md:text-left flex-1">
-                <div class="inline-block bg-indigo-500/20 text-indigo-300 text-sm font-semibold px-3 py-1 rounded-md mb-3 border border-indigo-500/30">
-                    e비즈니스학과 학과장
-                </div>
-                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-2">박기남 <span class="text-2xl md:text-3xl font-medium text-slate-300">교수</span></h1>
-                <p class="text-indigo-200 font-medium text-lg mb-6">경영정보학(MIS) 전공 · 20년 현장 컨설팅 경력의 실무형 학자</p>
-                
-                <p class="text-slate-300 text-sm md:text-base leading-relaxed max-w-2xl">
-                    학문적 이론과 20년 이상의 실무 컨설팅 경험을 결합하여 디지털 시대의 e비즈니스 및 경영정보 전략을 탐구합니다. 교육과 연구 및 학술 저술활동 등 다양한 분야에서 최고 수준의 성과를 이끌어내고 있습니다.
-                </p>
+            <div class="hidden sm:block font-serif-title italic text-stone-500 normal-case text-sm">
+                Management Information Systems & e-Business
+            </div>
+            <div>
+                <span>Faculty Profile</span>
             </div>
         </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-6 py-12 space-y-12">
+    <main class="max-w-6xl mx-auto px-6 py-12 lg:py-20 space-y-20">
 
-        <!-- Highlights / Stats Cards -->
-        <section class="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-4 hover:shadow-md transition">
-                <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl font-bold shrink-0">
-                    <i class="fa-solid fa-briefcase"></i>
+        <!-- Hero Section: Editorial Monograph Style -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end border-b editorial-border pb-16">
+            <div class="lg:col-span-8 space-y-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-amber-900/20 bg-amber-900/5 text-amber-900 text-xs font-semibold tracking-wide">
+                    <i class="fa-solid fa-crown text-[10px]"></i>
+                    <span>e비즈니스학과 학과장</span>
                 </div>
-                <div>
-                    <div class="text-xl font-bold text-slate-900">20년+</div>
-                    <div class="text-xs text-slate-500 font-medium">산업체 컨설팅 경력</div>
+
+                <div class="space-y-4">
+                    <h1 class="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-stone-900 leading-[1.08]">
+                        박기남 <span class="font-editorial italic font-normal text-3xl sm:text-4xl text-stone-500">Ph.D.</span>
+                    </h1>
+                    <p class="text-xl sm:text-2xl text-stone-700 font-light leading-relaxed max-w-2xl">
+                        경영학 박사 · <span class="font-semibold text-stone-900 underline decoration-amber-700/40 underline-offset-4">20년 컨설팅 경력</span>의 실무형 학자 및 경영정보학 전문가
+                    </p>
+                </div>
+
+                <p class="text-stone-600 text-base leading-relaxed max-w-2xl">
+                    학문적 깊이와 20년에 걸친 현장 산업 컨설팅 노하우를 결합하여, 디지털 전환 시대의 Business Architecture와 데이터 기반 의사결정 모델을 연구하고 후학을 양성하고 있습니다.
+                </p>
+
+                <!-- Quick Stats Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-4 border-t editorial-border">
+                    <div>
+                        <div class="font-serif-title text-3xl font-bold text-stone-900">20<span class="text-amber-700 text-xl">+</span></div>
+                        <div class="text-xs text-stone-500 font-medium mt-1">년 산업체 컨설팅</div>
+                    </div>
+                    <div>
+                        <div class="font-serif-title text-3xl font-bold text-stone-900">02<span class="text-amber-700 text-xl">회</span></div>
+                        <div class="text-xs text-stone-500 font-medium mt-1">교육부 장관 표창</div>
+                    </div>
+                    <div>
+                        <div class="font-serif-title text-3xl font-bold text-stone-900">03<span class="text-amber-700 text-xl">회</span></div>
+                        <div class="text-xs text-stone-500 font-medium mt-1">전국학회 최우수논문상</div>
+                    </div>
+                    <div>
+                        <div class="font-serif-title text-3xl font-bold text-stone-900">Who's<span class="text-amber-700 text-xl">Who</span></div>
+                        <div class="text-xs text-stone-500 font-medium mt-1">세계인명사전 수록</div>
+                    </div>
                 </div>
             </div>
 
-            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-4 hover:shadow-md transition">
-                <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl font-bold shrink-0">
-                    <i class="fa-solid fa-award"></i>
-                </div>
-                <div>
-                    <div class="text-xl font-bold text-slate-900">2회</div>
-                    <div class="text-xs text-slate-500 font-medium">교육부 장관 표창</div>
-                </div>
-            </div>
+            <!-- Visual Monograph Frame -->
+            <div class="lg:col-span-4">
+                <div class="relative bg-stone-paper p-6 rounded-2xl border editorial-border shadow-sm space-y-6">
+                    <div class="aspect-[4/5] rounded-xl bg-stone-200 border editorial-border overflow-hidden relative flex flex-col justify-end p-6">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-900/20 to-transparent z-10"></div>
+                        <!-- Stylized Academic Graphic Icon -->
+                        <div class="absolute inset-0 flex items-center justify-center text-stone-300/40">
+                            <i class="fa-solid fa-graduation-cap text-9xl"></i>
+                        </div>
+                        <div class="relative z-20 text-white space-y-1">
+                            <div class="text-xs font-mono uppercase tracking-widest text-amber-300/80">Professor & Researcher</div>
+                            <div class="text-xl font-bold tracking-tight">박기남 교수</div>
+                            <div class="text-xs text-stone-300">동의대학교 e비즈니스학과</div>
+                        </div>
+                    </div>
 
-            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-4 hover:shadow-md transition">
-                <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl font-bold shrink-0">
-                    <i class="fa-solid fa-scroll"></i>
-                </div>
-                <div>
-                    <div class="text-xl font-bold text-slate-900">3회</div>
-                    <div class="text-xs text-slate-500 font-medium">전국학회 최우수 논문상</div>
-                </div>
-            </div>
-
-            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-4 hover:shadow-md transition">
-                <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl font-bold shrink-0">
-                    <i class="fa-solid fa-book-bookmark"></i>
-                </div>
-                <div>
-                    <div class="text-xl font-bold text-slate-900">수상</div>
-                    <div class="text-xs text-slate-500 font-medium">KMIS 우수도서상</div>
+                    <div class="space-y-3 text-xs text-stone-600">
+                        <div class="flex justify-between py-1.5 border-b editorial-border">
+                            <span class="font-medium text-stone-500">주요 전공</span>
+                            <span class="font-semibold text-stone-900">경영정보학 (MIS)</span>
+                        </div>
+                        <div class="flex justify-between py-1.5 border-b editorial-border">
+                            <span class="font-medium text-stone-500">최종 학위</span>
+                            <span class="font-semibold text-stone-900">경영학 박사</span>
+                        </div>
+                        <div class="flex justify-between py-1.5 border-b editorial-border">
+                            <span class="font-medium text-stone-500">현재 보직</span>
+                            <span class="font-semibold text-stone-900">e비즈니스학과 학과장</span>
+                        </div>
+                        <div class="flex justify-between py-1.5">
+                            <span class="font-medium text-stone-500">세계 인명 사전</span>
+                            <span class="font-semibold text-stone-900">Who's Who 수록</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Main Content Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
-            <!-- Left Column: Expertise & Education -->
-            <div class="space-y-8">
-                <!-- Academic Expertise -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                    <h2 class="text-xl font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100 flex items-center gap-2">
-                        <i class="fa-solid fa-graduation-cap text-indigo-600"></i> 전문 분야
-                    </h2>
-                    <ul class="space-y-3 text-slate-600 text-sm">
-                        <li class="flex items-start gap-2">
-                            <i class="fa-solid fa-check text-indigo-500 mt-1"></i>
-                            <span><strong>전공:</strong> 경영정보학 (MIS)</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="fa-solid fa-check text-indigo-500 mt-1"></i>
-                            <span>e비즈니스 전략 및 디지털 전환(DX)</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="fa-solid fa-check text-indigo-500 mt-1"></i>
-                            <span>기업 정보시스템 구축 및 경영 컨설팅</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="fa-solid fa-check text-indigo-500 mt-1"></i>
-                            <span>데이터 기반 의사결정 프로세스</span>
-                        </li>
-                    </ul>
+        <!-- Academic & Honors Section (Bento Editorial Style) -->
+        <section class="space-y-10">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b-2 editorial-border-strong pb-4">
+                <div>
+                    <span class="text-xs font-mono uppercase tracking-widest text-amber-800 font-semibold">Honors & Research</span>
+                    <h2 class="text-3xl font-bold text-stone-900 tracking-tight mt-1">수상 및 주요 연구 성과</h2>
                 </div>
-
-                <!-- Education & Academic Degree -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                    <h2 class="text-xl font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100 flex items-center gap-2">
-                        <i class="fa-solid fa-user-graduate text-indigo-600"></i> 학력 및 학위
-                    </h2>
-                    <div class="space-y-3">
-                        <div class="pl-4 border-l-2 border-indigo-500">
-                            <div class="font-bold text-slate-800">경영학 박사</div>
-                            <div class="text-xs text-slate-500">경영정보학(MIS) 세부전공</div>
-                        </div>
-                    </div>
-                </div>
+                <p class="text-xs text-stone-500 max-w-xs">
+                    세계인명사전 등재, 학술지 최우수 논문상과 정부 장관 표창, 경영정보학 분야 우수도서상을 아우르는 대표 성과입니다.
+                </p>
             </div>
 
-            <!-- Right Column: Career, Awards, Leadership -->
-            <div class="lg:col-span-2 space-y-8">
-                
-                <!-- Major Awards -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                    <h2 class="text-xl font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100 flex items-center gap-2">
-                        <i class="fa-solid fa-trophy text-indigo-600"></i> 수상 및 연구 성과
-                    </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Highlight Card 0: Who's Who -->
+                <div class="bg-white p-6 rounded-2xl border editorial-border space-y-4 hover:border-amber-700/50 transition duration-300 group shadow-sm flex flex-col justify-between">
                     <div class="space-y-4">
-                        <div class="p-4 rounded-xl bg-purple-50/70 border border-purple-100 flex items-start gap-3">
-                            <i class="fa-solid fa-book-open-reader text-purple-600 text-xl mt-0.5"></i>
-                            <div>
-                                <h3 class="font-bold text-slate-900">한국경영정보학회(KMIS) 우수도서상</h3>
-                                <p class="text-sm text-slate-600 mt-0.5">경영정보학 분야의 학술적 가치와 가공 깊이를 인정받아 우수도서상을 수상했습니다.</p>
-                            </div>
+                        <div class="w-10 h-10 rounded-full bg-amber-900/10 text-amber-900 flex items-center justify-center font-serif-title font-bold text-lg group-hover:bg-amber-900 group-hover:text-white transition">
+                            <i class="fa-solid fa-globe"></i>
                         </div>
-
-                        <div class="p-4 rounded-xl bg-amber-50/70 border border-amber-100 flex items-start gap-3">
-                            <i class="fa-solid fa-medal text-amber-500 text-xl mt-0.5"></i>
-                            <div>
-                                <h3 class="font-bold text-slate-900">교육부 장관 표창 (2회 수상)</h3>
-                                <p class="text-sm text-slate-600 mt-0.5">교육 발전 및 학술 연구 공로를 인정받아 정부 장관 표창을 수훈했습니다.</p>
-                            </div>
+                        <div class="space-y-2">
+                            <span class="text-[11px] font-mono uppercase tracking-wider text-amber-800 font-bold">Global Recognition</span>
+                            <h3 class="text-lg font-bold text-stone-900 leading-snug">세계인명사전<br>Who's Who 수록</h3>
+                            <p class="text-xs text-stone-600 leading-relaxed pt-2 border-t editorial-border">
+                                탁월한 경영정보학 연구 및 학술적 업적을 세계적으로 인정받아 세계 3대 인명사전인 '마르퀴즈 후즈 후(Marquis Who's Who)' 등에 수록.
+                            </p>
                         </div>
-
-                        <div class="p-4 rounded-xl bg-indigo-50/70 border border-indigo-100 flex items-start gap-3">
-                            <i class="fa-solid fa-certificate text-indigo-500 text-xl mt-0.5"></i>
-                            <div>
-                                <h3 class="font-bold text-slate-900">전국규모 학회지 최우수 논문상 (3회 수상)</h3>
-                                <p class="text-sm text-slate-600 mt-0.5">경영정보 및 e비즈니스 분야의 탁월한 연구 업적으로 권위 있는 학회지 최우수 논문상을 수상했습니다.</p>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="text-[11px] font-medium text-stone-400 pt-4 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-amber-700"></span> Marquis Who's Who
                     </div>
                 </div>
 
-                <!-- Professional & Academic Career -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                    <h2 class="text-xl font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100 flex items-center gap-2">
-                        <i class="fa-solid fa-landmark text-indigo-600"></i> 주요 경력 및 보직
-                    </h2>
-                    
-                    <div class="relative pl-6 space-y-6 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-slate-200">
-                        <div class="relative">
-                            <span class="absolute -left-[1.85rem] top-1.5 w-3 h-3 rounded-full bg-indigo-600 ring-4 ring-white"></span>
-                            <h3 class="font-bold text-slate-900">e비즈니스학과 학과장</h3>
-                            <p class="text-sm text-slate-500">현직 | 신기술 및 산업 수요 기반 미래형 e비즈니스 인재 양성 총괄</p>
+                <!-- Highlight Card 1: KMIS Book Award -->
+                <div class="bg-white p-6 rounded-2xl border editorial-border space-y-4 hover:border-amber-700/50 transition duration-300 group shadow-sm flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-10 h-10 rounded-full bg-stone-100 text-stone-900 flex items-center justify-center font-serif-title font-bold text-lg group-hover:bg-stone-900 group-hover:text-white transition">
+                            <i class="fa-solid fa-book"></i>
                         </div>
-
-                        <div class="relative">
-                            <span class="absolute -left-[1.85rem] top-1.5 w-3 h-3 rounded-full bg-slate-300 ring-4 ring-white"></span>
-                            <h3 class="font-bold text-slate-900">동의대학교 정보경영학부 학부장 역임</h3>
-                            <p class="text-sm text-slate-500">학부 운영 총괄 및 교육과정 개편, 연구 환경 개선 주도</p>
+                        <div class="space-y-2">
+                            <span class="text-[11px] font-mono uppercase tracking-wider text-amber-800 font-bold">Academic Publication</span>
+                            <h3 class="text-lg font-bold text-stone-900 leading-snug">한국경영정보학회<br>우수도서상 수상</h3>
+                            <p class="text-xs text-stone-600 leading-relaxed pt-2 border-t editorial-border">
+                                국내 대표 학회인 한국경영정보학회(KMIS)에서 학술적 학문 가치와 산업 기여도를 인정받아 공식 선정된 우수도서상.
+                            </p>
                         </div>
-
-                        <div class="relative">
-                            <span class="absolute -left-[1.85rem] top-1.5 w-3 h-3 rounded-full bg-slate-300 ring-4 ring-white"></span>
-                            <h3 class="font-bold text-slate-900">20년 현장 컨설팅 경력</h3>
-                            <p class="text-sm text-slate-500">다수 기업 및 공공기관 대상 경영 전략, 정보화(IT) 솔루션, 디지털 전환 자문 수행</p>
-                        </div>
+                    </div>
+                    <div class="text-[11px] font-medium text-stone-400 pt-4 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-stone-800"></span> 한국경영정보학회 (KMIS)
                     </div>
                 </div>
 
+                <!-- Highlight Card 2: Minister Award -->
+                <div class="bg-white p-6 rounded-2xl border editorial-border space-y-4 hover:border-amber-700/50 transition duration-300 group shadow-sm flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-10 h-10 rounded-full bg-stone-100 text-stone-900 flex items-center justify-center font-serif-title font-bold text-lg group-hover:bg-stone-900 group-hover:text-white transition">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-[11px] font-mono uppercase tracking-wider text-amber-800 font-bold">Government Recognition</span>
+                            <h3 class="text-lg font-bold text-stone-900 leading-snug">교육부 장관 표창<br><span class="text-amber-800 font-serif-title italic font-normal text-sm">(총 2회 수상)</span></h3>
+                            <p class="text-xs text-stone-600 leading-relaxed pt-2 border-t editorial-border">
+                                우수한 교육 역량과 경영정보학 분야 연구 실적, 학술적 헌신을 인정받아 2회에 걸쳐 대한민국 교육부 장관상 수훈.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-[11px] font-medium text-stone-400 pt-4 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-stone-800"></span> 대한민국 교육부
+                    </div>
+                </div>
+
+                <!-- Highlight Card 3: Best Paper Award -->
+                <div class="bg-white p-6 rounded-2xl border editorial-border space-y-4 hover:border-amber-700/50 transition duration-300 group shadow-sm flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-10 h-10 rounded-full bg-stone-100 text-stone-900 flex items-center justify-center font-serif-title font-bold text-lg group-hover:bg-stone-900 group-hover:text-white transition">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-[11px] font-mono uppercase tracking-wider text-amber-800 font-bold">Best Research Paper</span>
+                            <h3 class="text-lg font-bold text-stone-900 leading-snug">전국규모 학회지<br>최우수 논문상 <span class="text-amber-800 font-serif-title italic font-normal text-sm">(3회)</span></h3>
+                            <p class="text-xs text-stone-600 leading-relaxed pt-2 border-t editorial-border">
+                                e비즈니스 모델, 정보시스템 구축 및 데이터 분석 연구 논문으로 전국 단위 주요 등재 학회지 최우수 논문상 3회 수상.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-[11px] font-medium text-stone-400 pt-4 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-stone-800"></span> 전국규모 등재학회
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Career & Leadership Timeline Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start pt-8">
+            <div class="lg:col-span-5 space-y-6">
+                <span class="text-xs font-mono uppercase tracking-widest text-amber-800 font-semibold">Leadership & Practice</span>
+                <h2 class="text-3xl font-bold text-stone-900 tracking-tight">주요 경력 및 보직 역사</h2>
+                <p class="text-sm text-stone-600 leading-relaxed">
+                    20년간의 실무 컨설팅 경험을 바탕으로 학부 행정과 학과 발전을 견인해 온 박기남 교수의 대표 경력입니다.
+                </p>
+                
+                <div class="bg-stone-paper p-6 rounded-2xl border editorial-border space-y-3 mt-6">
+                    <div class="flex items-center gap-3 text-stone-900 font-bold text-sm">
+                        <i class="fa-solid fa-compass text-amber-800"></i>
+                        <span>핵심 전문 영역</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="text-xs bg-white px-3 py-1.5 rounded-lg border editorial-border text-stone-700 font-medium">경영정보시스템 (MIS)</span>
+                        <span class="text-xs bg-white px-3 py-1.5 rounded-lg border editorial-border text-stone-700 font-medium">e비즈니스 전략</span>
+                        <span class="text-xs bg-white px-3 py-1.5 rounded-lg border editorial-border text-stone-700 font-medium">디지털 전환 (DX)</span>
+                        <span class="text-xs bg-white px-3 py-1.5 rounded-lg border editorial-border text-stone-700 font-medium">기업 IT 컨설팅</span>
+                        <span class="text-xs bg-white px-3 py-1.5 rounded-lg border editorial-border text-stone-700 font-medium">데이터 프로세스 설계</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 space-y-6">
+                <div class="border-l-2 border-stone-800 pl-6 space-y-10 my-2">
+                    
+                    <!-- Item 1 -->
+                    <div class="relative space-y-2 group">
+                        <span class="absolute -left-[31px] top-1 w-3 h-3 rounded-full bg-amber-700 ring-4 ring-[#fbf9f5]"></span>
+                        <div class="text-xs font-mono text-amber-800 font-bold tracking-wider">CURRENT POSITION</div>
+                        <h3 class="text-xl font-bold text-stone-900">e비즈니스학과 학과장</h3>
+                        <p class="text-xs text-stone-500 font-medium">동의대학교</p>
+                        <p class="text-sm text-stone-600 leading-relaxed pt-1">
+                            급변하는 디지털 시장 환경에 맞춘 미래형 e비즈니스 융합 인재 양성과 교육과정 혁신을 총괄하고 있습니다.
+                        </p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="relative space-y-2 group">
+                        <span class="absolute -left-[31px] top-1 w-3 h-3 rounded-full bg-stone-400 ring-4 ring-[#fbf9f5]"></span>
+                        <div class="text-xs font-mono text-stone-400 font-bold tracking-wider">ACADEMIC LEADERSHIP</div>
+                        <h3 class="text-xl font-bold text-stone-900">동의대학교 정보경영학부 학부장 역임</h3>
+                        <p class="text-xs text-stone-500 font-medium">동의대학교 정보경영학부</p>
+                        <p class="text-sm text-stone-600 leading-relaxed pt-1">
+                            정보경영학부의 학부장으로서 연구 및 교육 커리큘럼을 고도화하고, 체계적인 학부 운영 시스템을 정립했습니다.
+                        </p>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="relative space-y-2 group">
+                        <span class="absolute -left-[31px] top-1 w-3 h-3 rounded-full bg-stone-400 ring-4 ring-[#fbf9f5]"></span>
+                        <div class="text-xs font-mono text-stone-400 font-bold tracking-wider">20+ YEARS EXPERIENCE</div>
+                        <h3 class="text-xl font-bold text-stone-900">20년 산업체 경영 및 IT 컨설팅 경력</h3>
+                        <p class="text-xs text-stone-500 font-medium">주요 기업 및 공공기관 전문 자문</p>
+                        <p class="text-sm text-stone-600 leading-relaxed pt-1">
+                            다수의 기업 및 공공기관을 대상으로 경영 정보화, IT 시스템 진단, e비즈니스 모델 수립 등 20년간의 실무 컨설팅 프로젝트 수행.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 mt-12 text-center text-sm">
-        <p>© 박기남 교수 연구실. All rights reserved.</p>
+    <!-- Footer Page Closure -->
+    <footer class="border-t editorial-border bg-stone-900 text-stone-400 py-12 px-6 mt-20">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-light">
+            <div class="space-y-1 text-center md:text-left">
+                <div class="text-stone-200 font-semibold text-sm">동의대학교 e비즈니스학과 박기남 교수</div>
+                <div>경영학 박사 · 경영정보학(MIS) 전공 · 학과장</div>
+            </div>
+            <div class="text-stone-500 text-center md:text-right">
+                © Prof. Kinam Park. All Rights Reserved.
+            </div>
+        </div>
     </footer>
 
 </body>
